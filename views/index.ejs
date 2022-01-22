@@ -1,0 +1,25 @@
+<%- include('partials/_header.ejs') %>
+    <%- include('partials/_navigation.ejs') %>
+        <section>
+            <div class="home-page">
+                <div class="about">
+                    <h2>JWT Token Validation Test</h2>
+                    <p>When you register/login, your token will be expiren in <span><b> 15 seconds</b> </span>. After
+                        that you will not able
+                        to go
+                        to dashboard for it requires a valid JWT toke. And your token is no longer valid after <span><b>
+                                15 seconds</b> </span>. After that your session will be end you will have to login again
+                    </p>
+                    <a href="/dashboard" class="dashboard-btn">Go to Dashboard(requires auth)</a>
+
+                    <h2>This is the token for check </h2>
+                    <p class="token-p">
+                        <%= token%>
+                    </p>
+                </div>
+            </div>
+
+
+
+        </section>
+        <%- include('partials/_footer') %>
